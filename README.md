@@ -27,3 +27,5 @@ Quit the server with CTRL-BREAK.
 Open this link: https://dbdiagram.io/d/61838302d5d522682df807d3
 
 ## API Documentation
+- Swagger: http://127.0.0.1:8000/swagger
+- Postman (Including Login): olshop.postman_collection.json
