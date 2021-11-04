@@ -9,6 +9,7 @@
    - Linux: `source venv/bin/activate`
    - Windows: `venv\Scripts\activate` 
 1. Install requirements `pip install -r requirements`
+1. Create a new database on localhost named `olshop`
 1. Create migrations `python manage.py makemigrations`
 1. Run migrations `python manage.py migrate`
 1. Seed data `python manage.py loaddata app/seeds/master-data.json`
@@ -23,7 +24,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 ```
 
-## Database Structure
+## Database
 Open this link: https://dbdiagram.io/d/61838302d5d522682df807d3
 
 ## API Documentation
