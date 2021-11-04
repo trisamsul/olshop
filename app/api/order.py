@@ -161,14 +161,14 @@ def confirm_payment(request, order_id):
     return JsonResponse({
         'type': rtype,
         'status': status,
-        'message': message,
-        'data': data,
+        'message': message
     })
 
 
 def generate_order_object(order):
     order_object = {
         'id': order.id,
+        'status': order.payment.get_status_display(),
         'method': order.payment.method,
         'payment_identifier': order.payment.payment_identifier,
         'total': order.payment.total,

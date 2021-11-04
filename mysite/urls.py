@@ -19,7 +19,7 @@ from django.urls import path
 from app.api import auth, merchants, order
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('/', admin.site.urls),
 
     path('api/v1/auth/login', auth.auth_login),
     path('api/v1/auth/logout', auth.auth_logout),
