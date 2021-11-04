@@ -28,6 +28,7 @@ class Payments(models.Model):
     payment_identifier = models.CharField(max_length=50)  # For eg. VA Number
     sub_total = models.PositiveBigIntegerField(default=0)
     tax = models.PositiveBigIntegerField(default=0)
+    total = models.PositiveBigIntegerField(default=0)
     TYPE_CHOICE = (
         (0, 'waiting'),
         (1, 'paid'),

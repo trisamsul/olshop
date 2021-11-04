@@ -16,10 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.api import auth
+from app.api import auth, merchants, order
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('api/v1/auth/login/', auth.auth_login),
+    path('api/v1/auth/login', auth.auth_login),
+    path('api/v1/auth/logout', auth.auth_logout),
+
+    path('api/v1/merchants', merchants.get_merchants),
+    path('api/v1/merchants/<int:merchant_id>', merchants.get_merchants),
+
+    path('api/v1/products', merchants.get_products),
+    path('api/v1/products/<int:product_id>', merchants.get_detail_product),
+
+    path('api/v1/order', order.put_order),
+    path('api/v1/order/<int:order_id>', order.get_order_info),
+
+    path('api/v1/payment/confirm/<int:order_id>', order.confirm_payment),
 ]
